@@ -38,5 +38,33 @@ public String toString() {
 
     return nombre + " (" + ip + ") [" + Vuln + "] [" + FW + "] [" + Pwn + "]";
 }
+
+    public String getnombre() {
+        return nombre;
+    }
+
+
+    public String getIP() {
+        return ip;
+    }
+
+    public boolean isFirewall() {
+        return firewall;
+    }
+
+    public boolean isVulnerable() {
+        return vulnerable;
+    }
+
+    public boolean isComprometido() {
+        return comprometido;
+    }
+
+    public ArrayList<Nodo> getvecinos() {
+        return vecinos;
+    }
+
 }
+
+
 
