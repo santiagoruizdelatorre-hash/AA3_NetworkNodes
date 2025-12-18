@@ -56,9 +56,18 @@
         }
 
         String listarVecinosDe(Nodo n) {
-            // Listar vecinos (iterar vecinos)
-            return "";
+    ArrayList<Nodo> vecinos = n.getvecinos();
+
+        if (vecinos.isEmpty()) return "(sin vecinos)";
+        String resultado = "";
+        
+        for (int i = 0; i < vecinos.size(); i++) {
+            resultado += vecinos.get(i).getnombre();
+                
+            if (i < vecinos.size() - 1) resultado += ", ";
         }
+        return resultado;
+    }
 
         ArrayList<Nodo> nodosAislados() {
             ArrayList<Nodo> aislados = new ArrayList<>();
